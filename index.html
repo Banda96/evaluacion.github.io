@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesos Cognitivos en la Evaluación</title>
+    <style>
+        :root {
+            --color-primario: #2c3e50;
+            --color-secundario: #3498db;
+            --color-fondo: #ecf0f1;
+            --color-destacado: #e74c3c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background-color: var(--color-fondo);
+            color: var(--color-primario);
+        }
+
+        header {
+            background: var(--color-primario);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .grid-procesos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .proceso-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border-left: 5px solid var(--color-secundario);
+        }
+
+        .proceso-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .proceso-card h3 {
+            color: var(--color-secundario);
+            margin-bottom: 1rem;
+        }
+
+        .investigacion-reciente {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-size: 0.9em;
+            border-left: 3px solid var(--color-destacado);
+        }
+
+        .navegacion-procesos {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: var(--color-secundario);
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .grid-procesos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Procesos Cognitivos en la Evaluación del Aprendizaje</h1>
+        <p>Perspectivas actuales basadas en investigación (2022-2023)</p>
+    </header>
+
+    <div class="container">
+        <nav class="navegacion-procesos">
+            <a href="#atencion" class="nav-link">Atención</a>
+            <a href="#memoria" class="nav-link">Memoria</a>
+            <a href="#metacognicion" class="nav-link">Metacognición</a>
+            <a href="#emociones" class="nav-link">Emociones</a>
+        </nav>
+
+        <div class="grid-procesos">
+            <!-- Proceso 1 - Atención -->
+            <article id="atencion" class="proceso-card">
+                <h3>🧠 Atención y Evaluación</h3>
+                <p>La capacidad de focalizar en estímulos relevantes durante actividades evaluativas.</p>
+                <div class="investigacion-reciente">
+                    <strong>Hallazgos recientes:</strong> 
+                    <ul>
+                        <li>La fatiga digital reduce la atención sostenida en evaluaciones en línea</li>
+                        <li>Uso de neurofeedback para mejorar concentración</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Proceso 2 - Memoria -->
+            <article id="memoria" class="proceso-card">
+                <h3>🔍 Memoria en Contextos Evaluativos</h3>
+                <p>Procesos de codificación, almacenamiento y recuperación de información.</p>
+                <div class="investigacion-reciente">
+                    <strong>Nuevos enfoques:</strong>
+                    <ul>
+                        <li>Efecto de la práctica espaciada en retención a largo plazo</li>
+                        <li>Impacto del sueño en consolidación de memorias</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Proceso 3 - Metacognición -->
+            <article id="metacognicion" class="proceso-card">
+                <h3>🎯 Metacognición y Autoevaluación</h3>
+                <p>Conciencia y regulación de los propios procesos de aprendizaje.</p>
+                <div class="investigacion-reciente">
+                    <strong>Tendencias 2023:</strong>
+                    <ul>
+                        <li>Apps de autoevaluación en tiempo real</li>
+                        <li>Estrategias de planificación basadas en IA</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Proceso 4 - Emociones -->
+            <article id="emociones" class="proceso-card">
+                <h3>💞 Regulación Emocional</h3>
+                <p>Impacto de las emociones en el desempeño evaluativo.</p>
+                <div class="investigacion-reciente">
+                    <strong>Estudios actuales:</strong>
+                    <ul>
+                        <li>Ansiedad matemática y memoria de trabajo</li>
+                        <li>Gamificación para reducir estrés evaluativo</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <script>
+        // Interactividad básica
+        document.querySelectorAll('.proceso-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
